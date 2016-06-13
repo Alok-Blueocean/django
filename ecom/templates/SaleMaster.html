@@ -1,0 +1,60 @@
+﻿{% extends "base.html" %}
+
+{% block title %} 
+	Products
+	{% endblock %}
+
+
+    {% block content %}
+<div class="col-md-12">
+	<div class="col-md-2">
+		<ul class="nav nav-pills nav-stacked">
+			 <li role="presentation"  id="Addsale"><a href="#">Add Sale</a></li>
+			  
+		</ul>
+	</div>
+	<div class="col-md-6" id="addsaleform" style="display:none" >
+		<div id="addsaleform">
+			<form action="{% url 'ecom:addsale' %}" method="POST" >  
+				{% csrf_token %}
+				{{form.as_p}}
+				<button type="submit" value="Add"  class="btn btn-Info">ADD It</button>
+			</form>
+		</div>
+	</div>
+	
+
+	<div class="col-md-4" id="salelist" style="display:block">
+		{% for sale in sales %}
+			<div class="row">
+				<a href="#" class="thumbnail">
+				  <!--<img src="..." alt="..."> -->
+				 <div class="caption">
+					{{sale.CustomerName}}
+					<small><small>{{sale.Address}}</small></small>
+					<br/>QUantity : {{sale.Sale_Quantity}}
+					<br/>ModelName : {{sale.Product_Sold.ModelName}}
+					<br/>Total Amount : {{sale.Total_Amount}}
+				</div>
+				<div class="btn-group">
+							  <a href="#" id="editbutton" class="btn btn-primary btn-sm" >Details</a>
+							  <a href="{% url 'ecom:deletesalebyid' sale.id %}" id="deletebutton" class="btn btn-Info btn-sm">Delete</a>
+				</div>
+				<div><br/></div>		
+					
+				</a>
+			</div>	
+		{% endfor %}	
+	</div>	
+	
+
+</div>
+	
+	{% endblock %}
+	
+<!--
+<form action="{% url 'ecom:filteredproduct' %}" method="POST" >  
+				{% csrf_token %}
+				
+				
+			-->

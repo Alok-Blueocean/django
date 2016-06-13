@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block title %} 
+	Products
+	{% endblock %}
+
+
+    {% block content %}
+<div class="col-md-12">
+	<div class="col-md-2">
+		<ul class="nav nav-pills nav-stacked">
+			 <li role="presentation"  id="Addp"><a href="#">Add Product</a></li>
+			  <li role="presentation"id ="Editp" ><a href="{% url 'ecom:editproduct' %}">Edit Product</a></li>
+			  <li role="presentation"><a href="#">Delete Product</a></li>
+		</ul>
+	</div>
+	<div class="col-md-6" id="addproduct" style="display:none" >
+		<div id="addproduct">
+			<form action="{% url 'ecom:addproduct' %}" method="POST" >  
+				{% csrf_token %}
+				{{form.as_p}}
+				<button type="submit" value="Add"  class="btn btn-Info">ADD It</button>
+			</form>
+		</div>
+	</div>
+	
+
+	<div class="col-md-4" id="productlist" style="display:block">
+		{% for product in products %}
+			<div class="row">
+				<a href="#" class="thumbnail">
+				  <!--<img src="..." alt="..."> -->
+				 <div class="caption">
+					Model : {{product.ModelName}}
+					<small><small>{{product.manufacturer}}</small></small>
+					<br/>Quantity : {{product.Quantity}}
+					
+					<br/>{{product.price_in_dollars}}
+				</div>
+				<p><a href="#" class="btn btn-primary" role="button">Details</a></p>
+				</a>
+				<div><br/></div>	
+			</div>	
+		{% endfor %}	
+	</div>	
+	
+
+</div>
+	
+	{% endblock %}
+	
+<!--
+<form action="{% url 'ecom:filteredproduct' %}" method="POST" >  
+				{% csrf_token %}
+				
+				
+			-->

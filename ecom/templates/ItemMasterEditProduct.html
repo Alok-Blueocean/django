@@ -1,0 +1,88 @@
+﻿
+{% extends "base.html" %}
+
+{% block title %} 
+	Products
+	{% endblock %}
+
+
+    {% block content %}
+<div class="col-md-12">
+	<div class="col-md-2">
+		<ul class="nav nav-pills nav-stacked">
+			 <li role="presentation"  id="Addp"><a href="{% url 'ecom:product' %}">Add Product</a></li>
+			  <li role="presentation" class="active" id ="Editp" ><a href="#">Edit Product</a></li>
+			  <li role="presentation"><a href="#">Delete Product</a></li>
+		</ul>
+	</div>	
+	<div class="col-md-6" id='editproduct' style='display:block'>
+		<div class="row extra-bottom-padding" id="extra-bottom-padding">
+			<div class="input-group col-md-6">
+			
+			<form action="{% url 'ecom:editproduct' %}" method="POST">  
+				{% csrf_token %}
+			  <input type="text" class="form-control" id="search"  value="{{ searchdata }}"  name="searchdata" placeholder="Enter Model Name here...">
+			  <span class="input-group-btn">
+				<button class="btn btn-default" type="submit"  value="ok" id="go">Go!</button>
+			</form>
+			  </span>
+			  
+			</div>
+		</div>
+
+		<div class="row" id = "productdisplay">
+			<div class="col-md-6" style="display:block">
+				{% for product in products %}
+				<div id="plist"> 
+					<div class="row" id="plist">
+						<a href="#" class="thumbnail" >
+						  <!--<img src="..." alt="..."> -->
+						 <div class="caption">
+							{{product.ModelName}}
+							<small><small>{{product.manufacturer}}</small></small>
+							<br/>{{product.price_in_dollars}}
+						</div>
+						<div >
+						
+						</div>
+						
+						<div class="btn-group">
+							  <a href="{% url 'ecom:editproductbyid' product.id %}" id="editbutton" class="btn btn-primary btn-sm" >Edit</a>
+							  <a href="{% url 'ecom:deleteproductbyid' product.id %}" id="deletebutton" class="btn btn-danger btn-sm">Delete</a>
+						</div>
+						
+						</a>
+					</div>
+				</div>
+				{% endfor %}
+				
+			</div>
+		</div>
+	</div>
+	
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" 			aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel">Edit Product</h4>
+      </div>
+      <div class="modal-body">
+        
+       
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+	
+</div>	
+	
+	
+	
+	{% endblock %}

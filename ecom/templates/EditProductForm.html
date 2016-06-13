@@ -1,0 +1,33 @@
+﻿{% extends "base.html" %}
+
+{% block title %} 
+	EditProduct Form
+	{% endblock %}
+
+
+    {% block content %}
+<div class="col-md-12">
+<div class="col-md-2">
+	<ul class="nav nav-pills nav-stacked">
+		 <li role="presentation"  id="Addp"><a href="{% url 'ecom:product' %}">Add Product</a></li>
+		  <li role="presentation" class="active" id ="Editp" ><a href="{% url 'ecom:editproduct' %}">Edit Product</a></li>
+		  <li role="presentation"><a href="#">Delete Product</a></li>
+	</ul>
+</div>	
+<div class="col-md-10" id='editproduct' style='display:block'>
+	<div class="row extra-bottom-padding" id="extra-bottom-padding">
+		<div class="input-group col-md-6">
+		
+			<form action="{% url 'ecom:editproductbyid' product.id%}" method="POST">  
+				{% csrf_token %}
+			  {{product.ModelName}}:<input type="text" value="{{product.ModelName}}"  name="ModelName">
+			  <button type="submit" class= "btn btn-info" value="Save Changes" name="Save Changes">Save Changes</button>
+			</form>
+			  </span>
+		  
+		</div>
+	</div>
+</div>
+	
+
+   {% endblock %}

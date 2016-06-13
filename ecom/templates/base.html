@@ -1,0 +1,45 @@
+﻿<html>
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css" />
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+<link rel="stylesheet" href="../../static/css/aspectcss.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="../../static/js/aspectjs.js"></script>
+<script src="../../static/js/jquery.cookie.js"></script>
+<title>My app</title>
+</head>
+<div class="container">
+    <nav  class="navbar navbar-default">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Mobile Database</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li id="itemmasetr" class="active" ><a href="{% url 'ecom:product' %}">Item Master</a></li>
+                <li><a href="{% url 'ecom:sale' %}">Sales Master</a></li>
+				<li><a href="{% url 'ecom:reports' %}">Reports</a></li>
+				
+				<li><a href="#">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <h1>{% block title %} 
+	
+	{% endblock %}</h1>
+
+
+    {% block content %}
+	
+	{% endblock %}
+</div>
+</html>

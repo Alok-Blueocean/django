@@ -1,0 +1,57 @@
+﻿{% extends "base.html" %}
+
+{% block title %} 
+	Reports
+	{% endblock %}
+
+
+    {% block content %}
+<div class="col-md-12">
+	<div class="col-md-2">
+		<ul class="nav nav-pills nav-stacked">
+			<li role="presentation"  id="productreport"><a href="{% url 'ecom:reports' %}">Product Report</a></li>
+			 <li role="presentation" class="active" id="salereport"><a href="{% url 'ecom:salesreport' %}">Sale Report</a></li>
+			  
+		</ul>
+	</div>
+	
+
+	<div class="col-md-10" >
+		
+		<div class="row">
+				<div id="salelist" style="display:block">
+					<div class="well well-sm" id="productreporttable">
+						<table class="table-fill">
+							<thead>
+							<tr>
+							<th class="text-left">CustomerName</th>
+							<th class="text-left">Address</th>
+							<th class="text-left">pub_date</th>
+							<th class="text-left">Product_Sold</th>
+							<th class="text-left">Sale_Quantity</th>
+							<th class="text-left">Total_Amount</th>
+							</tr>
+							</thead>
+							<tbody class="table-hover">
+						{% for sale in sales %}
+								<tr>
+								<td class="text-left">{{sale.CustomerName}}</td>
+								<td class="text-left">{{sale.Address}}</td>
+								<td class="text-left">{{sale.pub_date}}</td>
+								<td class="text-left">{{sale.Product_Sold.ModelName}}</td>
+								<td class="text-left">{{sale.Sale_Quantity}}</td>
+								<td class="text-left">{{sale.Total_Amount}}</td>
+								</tr>
+						{% endfor %}
+							</tbody>
+						</table>
+					</div>
+				</div>
+		</div>
+			
+			
+	</div>
+
+</div>
+	
+	{% endblock %}

@@ -1,0 +1,113 @@
+#section_operation{
+    padding-top: 5px;
+}
+#show-concat {
+    padding: 0px;
+    margin-bottom: 5px;
+    margin-left: -25px;
+    cursor: pointer
+}
+#concat-section .panel .panel-heading{
+    background: #FFD966;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+#drag-content li.list-group-item{
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    min-width: 30%;
+    max-width: 100%;
+    min-height: 40px;
+}
+.drop-content{
+    min-height: 100px;
+    margin-bottom: 20px;
+}
+li.list-group-item.drag-content{
+    z-index: 1000;
+    word-wrap: break-word;
+}
+.split-title{
+    font-size: 18px;
+    padding: 15px;
+}
+.data-split .alert {
+    padding-left: 5px;
+    background-color: #fff;
+}
+.data-split .edit-data-split{
+    margin-left: -15px;
+    margin-top: -5px;
+}
+.slider.slider-horizontal{
+    width: 100%;
+}
+.slider-selection{
+    background: #1F4E79 ;
+}
+.slider-handle{
+    background: #BFBFBF;
+}
+.popover .row{
+    margin: 0px;
+}
+.tooltip.tooltip-main{
+    z-index: 1000;
+}
+#sampling-type{
+    margin-top: 10px;
+    margin-left: -22px;
+}
+table#concatenated_preview th {
+    border: 1px solid #C0C0C0;
+    padding: 5px;
+}
+table#concatenated_preview td {
+    border: 1px solid #C0C0C0;
+    padding: 5px;
+}
+table#concatenated_preview{
+    width:100%;
+}
+table#sampled_preview td {
+    border: 1px solid #C0C0C0;
+    padding: 5px;
+}
+table#sampled_preview th {
+    border: 1px solid #C0C0C0;
+    padding: 5px;
+}
+table#sampled_preview{
+    width:100%;
+}
+.sample_params_textbox{
+    margin: 0px 0px 8px 8px;
+}
+.sample-param-add-btn{
+    margin-top: 10px;
+    margin-left: 26px;
+}
+.sample-list{
+    max-height: 200px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+.sample-params-list {
+    list-style: none;
+    width: 100%;
+    padding-left: 0px;
+}
+#validateSampling(this){
+    margin-top:15px;
+}
+.params-title{
+    font-size: 18px;
+}
+.smpl-type{
+    padding-left:0px !important;
+}
+.smpl-titles{
+    font-size:14px;
+}

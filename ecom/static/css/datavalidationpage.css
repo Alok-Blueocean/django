@@ -1,0 +1,85 @@
+.operations-section{
+    border-right: none;
+    background-color: #ED7D31;
+}
+.validation-title{
+    padding: 15px;
+    font-size: 18px;
+}
+.breadcrumb-matrix{
+    margin-left: 10px;
+    width: 90%;
+}
+.breadcrumb-matrix.report{
+    background-color: #419641;
+}
+
+.breadcrumb-matrix.confusion{
+    background-color: #419641;
+}
+.breadcrumb-matrix.score{
+    background-color: #419641;
+}
+#model_tfidf_error{
+    display:none;
+}
+.downlinks{
+    color: #fff !important;
+}
+#section_matrices_details{
+    display: none;
+}
+#confusion-matrix-modal .modal-body, #accuracy-matrix-modal .modal-body{
+    white-space: pre-wrap;
+    max-height: 300px;
+    overflow: auto;
+}
+.validation-specs-cont{
+    display:none;
+}
+#user_dir_add_cont{
+    display:none;
+    padding-bottom:15px;
+}
+/*XVal and YVal*/
+.panel-body .nav-tabs li.active .extr-title-bar{
+   background: #FFD966  !important;
+   color: #000;
+}
+.nav-tabs{
+    border: none;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus,
+.nav-tabs>li>a:hover, .nav-tabs>li>a:focus{
+    border: none;
+    background: none
+}
+[id$='columns_chooser']{
+    height: 300px;
+}
+#section_matrices_display_run{
+    width:84%;
+    padding-left:20%;;
+}
+#select-model, #select-tfidf, #select-user-directory{
+    width:90%;
+}
+[id$='Test-Preview'] tbody tr td{
+    border: 1px solid #C0C0C0;
+    padding: 5px;
+}
+input#X-Test-to_record,input#Y-Test-to_record {
+    width: 90%;
+    margin-left: -20px;
+}
+input#X-Test-from_record,input#Y-Test-from_record {
+    width: 90%;
+    margin-left: -40px;
+}
+#X-Test-action_after_extraction,#Y-Test-action_after_extraction{
+    padding-top: 50px;
+}
+#test-section .panel-default .panel-heading{
+    background: #FFD966;
+    border: none;
+}

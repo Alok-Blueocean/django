@@ -1,0 +1,54 @@
+﻿{% extends "base.html" %}
+
+{% block title %} 
+	Reports
+	{% endblock %}
+
+
+    {% block content %}
+<div class="col-md-12">
+	<div class="col-md-2">
+		<ul class="nav nav-pills nav-stacked">
+			<li role="presentation" class="active" id="productreport"><a href="{% url 'ecom:reports' %}">Product Report</a></li>
+			 <li role="presentation"  id="salereport"><a href="{% url 'ecom:salesreport' %}">Sale Report</a></li>
+			  
+		</ul>
+	</div>
+	
+
+	<div class="col-md-10" >
+		<div class = "row">
+			<div id="productlist" style="display:block" >
+				<div  id='productreporttable' class='well well-sm'>
+					<table class="table-fill">
+						<thead>
+						<tr>
+						<th class="text-left">ModelName</th>
+						<th class="text-left">description</th>
+						<th class="text-left">manufacturer</th>
+						<th class="text-left">price_in_dollars</th>
+						<th class="text-left">In Stock</th>
+						<th class="text-left">Serial_No</th>
+						</tr>
+						</thead>
+						<tbody class="table-hover">
+					{% for product in products %}
+							<tr>
+							<td class="text-left">{{product.ModelName}}</td>
+							<td class="text-left">{{product.description}}</td>
+							<td class="text-left">{{product.manufacturer}}</td>
+							<td class="text-left">{{product.price_in_dollars}}</td>
+							<td class="text-left">{{product.Quantity}}</td>
+							<td class="text-left">{{product.Serial_No}}</td>
+							</tr>
+					{% endfor %}
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+	
+	{% endblock %}

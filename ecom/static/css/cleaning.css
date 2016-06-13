@@ -1,0 +1,31 @@
+.test-class{
+    color:red;
+    font-size:20px;
+}
+#regex_add1,#regex_add{
+    width: 75%;
+}
+span.wordofgarbage span:first-child{
+    color:#FF0000;
+}
+span.wordofgarbage span:nth-child(2){
+    color: #D8FF0D;
+}
+table#sampled_data_preview td {
+    border: 1px solid #C0C0C0;
+    padding: 5px;
+}
+table#sampled_data_preview th {
+    border: 1px solid #C0C0C0;
+    padding: 5px;
+}
+table#sampled_data_preview{
+    width:100%;
+}
+/*File preview*/
+#clean_items_cont .file-preview, #clean_items_cont .kv-upload-progress {
+    display: none !important;
+}
+#clean_items_cont .file-input .input-group{
+    padding: 10px;
+}

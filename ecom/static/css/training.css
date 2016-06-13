@@ -1,0 +1,178 @@
+#tfidf_classi_sections {
+    padding-bottom: 10px;
+    background-color: #ED7D31;
+}
+.operations-section{
+    border-right: none;
+}
+.preview-section{
+    border-left: 1px solid #C0C0C0;
+}
+.tfidf-add, .classifier-add{
+    width: 92%;
+    height: 10px;
+    margin: 7px 0px 0px -9px;
+    font-size: 13px;
+}
+.tfidf-add-btns, .classifier-add-btns{
+    margin-top: 12px;
+    margin-left: 10px;
+}
+.tfidf-list, .classifier-list{
+    max-height: 235px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+#tfidf-list, #classifier-list{
+    padding: 0px;
+}
+.tfidf-words, .classifier-words{
+    margin-top: 8px;
+    list-style: none;
+}
+#classifier-right-side{
+    padding-left:0px;
+    width:71%;
+}
+#classifier-right-side li{
+    width:82%;
+}
+#tfidf_list_cont{
+    width:83%;
+}
+#ifidf_list_item{
+    width:80%;
+}
+.classifier-words{
+    width: 50%;
+}
+.training-title{
+    padding: 15px;
+    font-size: 18px;
+}
+li.choose-block{
+    float: left;
+    list-style: none;
+    width: 20%;
+    height: 115px;
+    padding: 10px 0px 2px 0;
+    font-size: 10px;
+    line-height: 1.4;
+    text-align: center;
+    background-color: #eeeff3;
+    border: 1px solid #fff;
+}
+.classifier-list{
+    display: block;
+    font-size: 14px;
+    margin-top: 5px;
+}
+.btn-circle{
+    width: 29px;
+    height:29px;
+    text-align: center;
+    padding: 5px 0;
+    margin-left: 10px;
+    font-size: 20px;
+    line-height: 2.00;
+    border-radius: 30px;
+}
+#choose-classifier{
+    margin-top: 10px;
+}
+.section_matrix{
+    margin: 5px;
+}
+.matrix-section{
+    border-top: 1px solid #C0C0C0;
+    background-color: #ED7D31;
+    padding-bottom: 15px;
+}
+.dev-accuracy{
+    background-color: #419641;
+    width: 60%;
+    margin-left: 15px;
+}
+#dev-accuracy {
+    height: 160px;
+}
+#dev-accuracy .panel{
+    border: 1px solid #544272;
+    border-radius: 0px;
+}
+#dev-accuracy .panel .panel-heading {
+    background: #544272;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 0px;
+    padding: 5px;
+}
+#dev-accuracy .panel .panel-heading .panel-title {
+    font-size: 14px;
+}
+#dev-accuracy .panel .panel-body{
+    padding: 10px;
+}
+#dev-accuracy .panel .panel-body .form-group{
+    margin-bottom: 10px;
+}
+#dev-accuracy .panel .panel-body .form-group .form-control{
+    height: 28px;
+    font-size: 13px;
+}
+#dev-accuracy .panel .panel-body .btn-default.app-btn{
+      padding: 3px 10px 3px 10px;
+      border-radius: 0;
+}
+#accuracy-modal .modal-body{
+    white-space: pre-wrap;
+    max-height: 300px;
+    overflow: auto;
+}
+#section_matrix .dev-accuracy a{
+    color: #fff;
+}
+.next_val_btn{
+    float:right;
+    margin-right:33px;
+}
+#section_dir_selection{
+    padding-top: 10px;
+}
+.dir-label-cont{
+    padding-left:31px;
+    padding-top: 6px;
+}
+#select-user-directory-save{
+    margin-left: -30px;
+    width: 50%;
+}
+#add-dir-cont-save{
+    margin-left:-36px;
+    display:none;
+}
+#user_dir_add_btn-save{
+    margin-left:-22px;
+}
+#dir_selection_error{
+    display:none;
+    padding-left: 31px;
+    padding-bottom: 9px;
+}
+#user_dir_add_save{
+    width:92%;
+}
+.tfidf_create_error{
+    padding: 3px 0px 14px 20px;
+    word-wrap: break-word;
+}
+#classi_run_error{
+    padding: 5px 0px 8px 67px;
+    word-wrap: break-word;
+}
+#ifidf_creation_button{
+    float:right;
+}
+#classi_model_creation_btn{
+    margin-left:26px;
+}
